@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style2.css" />
+  </head>
+  <body class="wishing_page_body">
+    <div class="navbar">
+      <h1>Make your wishes</h1>
+
+      <!-- <h1>Happy</p> -->
+      <div class="nav">
+        <ul>
+          <li>Notification</li>
+          <li>Message</li>
+          <li>Up-coming events</li>
+          <li>Histroy</li>
+        </ul>
+      </div>
+    </div>
+    <div class="container"></div>
+    <div>
+      <p>Birthday is full of happiness</p>
+    </div>
+    <script>
+      const postContainer = document.querySelector(".container");
+
+      const post = document.createElement("div");
+      post.classList.add("post");
+      postContainer.appendChild(post);
+      const storedWish = localStorage.getItem("wish");
+      const wishContent = [];
+      if (storedWish) {
+        const data = JSON.parse(storedWish);
+        console.log(data);
+
+        post.innerHTML = `<img class="post-img" src="${data.media}" alt="image"/>`;
+      } else {
+        console.log("no wishes");
+      }
+
+      const content = document.createElement("div");
+      content.classList.add("content");
+      postContainer.append(content);
+
+      const storedWishData = localStorage.getItem("wishData");
+      if (storedWishData) {
+        const wishData = JSON.parse(storedWishData);
+        console.log(wishData);
+        content.innerHTML = `
+        <div class="wish-receiver">Hi ${wishData.wishTo}</div>
+        <br>
+        <h1 class="head">${wishData.wish}</h1>
+        <div class="sent-by">
+            <p>~${wishData.sendBy}</p>
+        </div>
+        `;
+      }
+    </script>
+  </body>
+</html>

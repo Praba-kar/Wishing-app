@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style2.css" />
+  </head>
+  <body class="form-body">
+    <div class="frontPage-container">
+    <div class="form-container">
+      <div class="wish">
+        <h2>Make a wish</h2>
+      </div>
+      <form>
+        <div class="wish-to">
+          <label class="text-area">Your wish to</label>
+          <input type="text" id="receiver" placeholder="wishing to" />
+        </div>
+        <div class="wishing-area">
+          <label class="text-area">Write your wish</label>
+          <textarea
+            id="wish"
+            type="text"
+            placeholder="Share your heart desire"
+          ></textarea>
+        </div>
+        <div class="media-area">
+          <label class="text-area">Add photo/video</label>
+          <input type="file" id="media" name="file" multiple="multiple" />
+        </div>
+      </form>
+      <div class="dropdown">
+        <label>Wish for</label>
+        <select id="wish-type">
+          <option selected>Birthday wish</option>
+          <option>Anniversary wish</option>
+        </select>
+      </div>
+      <div class="sendBy">
+        <label class="text-area">Send by</label>
+        <input type="text" id="send" name="sendby" placeholder="send by" />
+      </div>
+
+      <div class="submit-btn">
+        <button class="submit" type="submit" onclick="redirectToWishingPage()">
+          <img src="https://cdn-icons-png.flaticon.com/128/911/911999.png" />
+        </button>
+      </div>
+    </div>
+    <div class="sidebar-container">
+      <div class="image-slide">
+        <div class="slide-content">
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQFU-XRoncQiA40zZc2VhQQ1DrDYB3T80FnWw&s"
+          />
+        </div>
+        <div class="slide-content">
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT95lu_L2QNs1EotnKh97_XbA59B8eeAFR06g&s"
+          />
+        </div>
+        <div class="slide-content">
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSbgtkO0seurNkBDbozTUZCohAlX4UIIgUKNg&s"
+          />
+        </div>
+        <div class="slide-content">
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTbl-G-4Zau-C1MwpFDO31evU9NGQHmC4xsHQ&s"
+          />
+        </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+    <script src="script.js"></script>
+  </body>
+</html>
